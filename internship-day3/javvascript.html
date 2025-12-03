@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Example</title>
+    <script>
+        function demo() {
+            var name = document.getElementById("t1").value;
+            var password = document.getElementById("t2").value;
+
+            alert("Name: " + name + "\nPassword: " + password);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="enter your name" id="t1">
+    <br><br>
+    <input type="password" placeholder="enter your password" id="t2">
+    <br><br>
+    <button onclick="demo()">Click Me</button>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+
+    <style>
+        table {
+            border: 2px solid black;
+            padding: 20px;
+            width: 400px;
+            margin: auto;
+            border-collapse: separate;
+            border-spacing: 10px;
+            background-color: #f3f3f3;
+        }
+
+        td {
+            font-size: 1.1rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        function add() {
+            let num1 = parseFloat(document.getElementById("t1").value);
+            let num2 = parseFloat(document.getElementById("t2").value);
+            document.getElementById("t3").value = num1 + num2;
+        }
+
+        function sub() {
+            let num1 = parseFloat(document.getElementById("t1").value);
+            let num2 = parseFloat(document.getElementById("t2").value);
+            document.getElementById("t3").value = num1 - num2;
+        }
+
+        function mul() {
+            let num1 = parseFloat(document.getElementById("t1").value);
+            let num2 = parseFloat(document.getElementById("t2").value);
+            document.getElementById("t3").value = num1 * num2;
+        }
+
+        function div() {
+            let num1 = parseFloat(document.getElementById("t1").value);
+            let num2 = parseFloat(document.getElementById("t2").value);
+            document.getElementById("t3").value = num1 / num2;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Simple Calculator</h1>
+
+    <table>
+        <tr>
+            <td>First Number:</td>
+            <td><input type="text" id="t1"></td>
+        </tr>
+
+        <tr>
+            <td>Second Number:</td>
+            <td><input type="text" id="t2"></td>
+        </tr>
+
+        <tr>
+            <td>Result:</td>
+            <td><input type="text" id="t3" readonly></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="add()">ADD</button></td>
+            <td><button onclick="sub()">SUBTRACT</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="mul()">MULTIPLY</button></td>
+            <td><button onclick="div()">DIVIDE</button></td>
+        </tr>
+    </table>
+
+</body>
+</html>

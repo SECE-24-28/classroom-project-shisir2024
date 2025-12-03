@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Example</title>
+
+    <script>
+         function add() {
+            var a = Number(document.getElementById("n1").value);
+            var b = Number(document.getElementById("n2").value);
+            alert("Addition: " + (a + b));
+        }
+
+        function sub() {
+            var a = Number(document.getElementById("n1").value);
+            var b = Number(document.getElementById("n2").value);
+            alert("Subtraction: " + (a - b));
+        }
+
+        function mul() {
+            var a = Number(document.getElementById("n1").value);
+            var b = Number(document.getElementById("n2").value);
+            alert("Multiplication: " + (a * b));
+        }
+
+        function div() {
+            var a = Number(document.getElementById("n1").value);
+            var b = Number(document.getElementById("n2").value);
+            alert("Division: " + (a / b));
+        }
+    </script>
+    <style>
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+        }
+        button {
+            cursor: pointer;
+            color: blue;
+        }
+        h2 {
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+    <input type="number" id="n1" placeholder="Enter first number" />
+    <br /><br />
+    <input type="number" id="n2" placeholder="Enter second number" />
+    <br /><br />
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+
+</body>
+</html>

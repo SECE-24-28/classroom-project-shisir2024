@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Animation Example</title>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+
+            }
+            nav{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:space-between;
+                background-color: black;
+            }
+           
+
+            
+            li,h1{
+
+color: white;
+padding-left: 5px;
+            }
+            vedeo{
+                position:fixed;
+                top:0;
+                left:0px;
+                width: 100vw;
+                height: 100vh;
+                object-fit:cover;
+                z-index:-1;
+            }
+.text{
+    position: absolute;
+    top: 250px;
+    left: 20px;
+    color:blue;
+}
+ol{
+    list-style-type: none;
+    display:flex;
+    flex-wrap: wrap;
+    justify-self:space-evenly;
+
+}
+li{
+    padding-left: 10px;
+    font-size:1.2rem;
+}
+vedeo{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;}
+p{
+    margin-top: 20px;
+    font-size: 20px;
+    width:600px;
+
+
+}
+
+button{
+    margin-top:20px;
+
+    padding: 10px;
+    border: radius 10px;
+    transition: 0.5s;
+}
+button:hover{
+
+    letter-spacing:4px;
+    background-color: grey;
+    color:black;
+
+}
+img{
+    width: 30px;
+    height: 30px;
+}
+footer{
+    background-color: black;
+    position:fixed;
+    left:20px;
+    bottom:10px;
+}
+            
+        </style>
+        </head>
+
+    <body>
+        <nav>
+            <h1>Travel</h1>
+            <ol>
+                <li>||home||</li>
+                <li>||about||</li>
+                <li>||contact||</li>
+                <li>||gallary||</li>
+            </ol>
+        </nav>
+        <main>
+            <vedeo src="5261785-uhd_3840_2160_24fps.mp4" controls autoplay loop"></vedeo>
+        </main>
+        <div class="text">
+            <h3>>never stop</h3>
+            <h1>>exploring the world</h1>
+<p>travel makes one modest. You see what a tiny place you occupy in the world. -Gustave Flaubert</p>
+<button>explore now</button>
+
+        </div>
+        <footer>
+            <ol>
+                <li><img src="whatsapp-logo-icon-free-png (1).webp"/li>
+                <li><img src="images.jfif"/li>
+            </ol>
+        </footer>
+        
+        
+        </body>
+
+</html>

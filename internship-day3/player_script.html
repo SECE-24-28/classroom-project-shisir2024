@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Example</title>
+    <script>
+        function demo(){
+            let sel = document.getElementById("sel").value;
+            alert("You selected sport is : " + sel);
+        }
+    </script>
+</head>
+<body>
+    <h2>Select Your Favorite Sport</h2>
+    <select id="sel">
+        <option value="Football">Football</option>
+        <option value="Basketball">Basketball</option>
+        <option value="Tennis">Tennis</option>
+        <option value="Cricket">Cricket</option>
+    </select>
+
+    <br><br>
+    <button onclick="demo()">Submit</button>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Example</title>
+
+    <script>
+        let changed = false;
+
+        function demo(){
+            let img = document.getElementById("im");
+
+            if(!changed){
+                img.src = "pngtree-flying-cup-of-coffee-with-splash-and-png-image_15739217.png";
+                changed = true;
+            } else {
+                img.src = "pexels-igor-haritanovich-814387-1695052.jpg";
+                changed = false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Change Image on Button Click</h2>
+
+   
+    <img id="im" 
+         src="angry-lion-with-yellow-eyes-free-image.webp" 
+         alt="Image" width="300" />
+
+    <br><br>
+
+    <button onclick="demo()">Change Image</button>
+
+</body>
+</html>
