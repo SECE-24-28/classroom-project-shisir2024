@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peacock Example</title>
+
+    <script>
+        function press() {
+            let body = document.getElementById("main");
+
+            let msg = document.createElement("h2");
+            msg.innerHTML = "Peacock is our national animal";
+            msg.style.color = "yellow";
+
+            body.appendChild(msg);
+        }
+    </script>
+</head>
+
+<body id="main" style="background: black; padding: 20px; text-align:center;">
+
+    <h1 style="color: aqua; font-size: 50px;">🦚 PEACOCK</h1>
+
+    <button onclick="press()" 
+        style="padding: 10px 20px; font-size: 18px; border-radius: 8px;">
+        Click Me
+    </button>
+</body>
+</html>
