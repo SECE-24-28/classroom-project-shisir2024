@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Digital Clock</title>
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        /* Beautiful gradient background */
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 30px;
+    }
+
+    #bigClock {
+        font-size: 100px;
+        font-weight: bold;
+        letter-spacing: 8px;
+        color: #00eaff;
+
+        /* Neon glow effect */
+        text-shadow: 0 0 15px #00eaff,
+                     0 0 30px #00eaff,
+                     0 0 45px #00eaff;
+    }
+
+    #smallClock {
+        font-size: 32px;
+        margin-top: 20px;
+        color: #ffffffc9;
+    }
+</style>
+
+</head>
+<body>
+
+    <h1>Digital Clock</h1>
+
+    <div id="bigClock">00:00:00</div>
+    <div id="smallClock">Loading...</div>
+
+<script>
+    function updateClock() {
+        let now = new Date();
+
+        let h = String(now.getHours()).padStart(2, '0');
+        let m = String(now.getMinutes()).padStart(2, '0');
+        let s = String(now.getSeconds()).padStart(2, '0');
+
+        document.getElementById("bigClock").textContent = `${h}:${m}:${s}`;
+        document.getElementById("smallClock").textContent = now.toLocaleTimeString();
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); 
+</script>
+
+</body>
+</html>

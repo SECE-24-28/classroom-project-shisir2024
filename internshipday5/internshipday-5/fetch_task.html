@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Task</title>
+</head> 
+
+<body>
+    <h1>Fetch Data From REST API</h1>
+    <!-- FIX: onclick (NOT oncllick) -->
+    <button id="bt" onclick="fetchRecords()">Fetch Info</button>
+    <div id="main"></div>
+
+    <script>
+        async function fetchRecords() {
+            let res = await fetch("https://jsonplaceholder.typicode.com/users");
+            let data = await res.json();
+
+            let main = document.getElementById("main");
+            main.innerHTML = ""; // Clear old data
+
+            data.forEach((obj) => {
+                let dv = document.createElement("div");
+                dv.innerHTML = `<b>${obj.name}</b> - ${obj.email} - ${obj.phone}`;
+                main.appendChild(dv);
+            });
+        }
+    </script>
+</body>
+</html>

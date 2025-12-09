@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dark / Light Mode</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+        transition: 0.3s;
+        background-color: white;
+        color: black;
+    }
+
+    /* Default button style */
+    button {
+        padding: 12px 25px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    /* Light mode button (black button) */
+    .btn-dark {
+        background-color: black;
+        color: white;
+    }
+
+    /* Dark mode button (white button) */
+    .btn-light {
+        background-color: white;
+        color: black;
+        border: 2px solid white;
+    }
+
+    /* Body dark mode */
+    .dark {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+</head>
+<body class="light">
+
+    <h1 id="modeName">Light Mode</h1>
+    <button id="toggleBtn" class="btn-dark">Switch to Dark Mode</button>
+
+<script>
+    let isDark = false;
+
+    document.getElementById("toggleBtn").addEventListener("click", function () {
+        isDark = !isDark;
+
+        if (isDark) {
+            // Activate dark mode
+            document.body.classList.add("dark");
+            document.getElementById("modeName").textContent = "Dark Mode";
+
+            // Button becomes light
+            this.classList.remove("btn-dark");
+            this.classList.add("btn-light");
+            this.textContent = "Switch to Light Mode";
+
+        } else {
+            // Activate light mode
+            document.body.classList.remove("dark");
+            document.getElementById("modeName").textContent = "Light Mode";
+
+            // Button becomes dark
+            this.classList.remove("btn-light");
+            this.classList.add("btn-dark");
+            this.textContent = "Switch to Dark Mode";
+        }
+    });
+</script>
+
+</body>
+</html>

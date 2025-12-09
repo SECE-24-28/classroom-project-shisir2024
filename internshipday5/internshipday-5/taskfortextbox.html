@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Suggest + Fetch</title>
+</head>
+
+<body>
+
+    <h2>Simple Auto Suggest (After Fetch)</h2>
+
+    <!-- Textbox -->
+    <input id="search" type="text" placeholder="Type here...">
+
+    <!-- Suggestions -->
+    <div id="suggestBox"></div>
+
+    <br><br>
+
+    <!-- Fetch Button -->
+    <button onclick="fetchUsers()">Fetch Info</button>
+
+    <!-- Display Fetched Data -->
+    <div id="main"></div>
+
+    <script>
+        let users = [];// global store
+
+        // Fetch users
+        async function fetchUsers() {
+            let res = await fetch("https://jsonplaceholder.typicode.com/users");
+            users = await res.json();
+
+            let main = document.getElementById("main");
+            main.innerHTML = "";
+
+            users.forEach(u => {
+                let d = document.createElement("div");
+                d.innerHTML = u.name + " - " + u.email;
+                main.appendChild(d);
+            });
+        }
+
+        // Auto suggestion
+        document.getElementById("search").addEventListener("input", function () {
+
+            let text = this.value.toLowerCase();
+            let box = document.getElementById("suggestBox");
+            box.innerHTML = ""; // clear old suggestions
+
+            if (text === "") return; // no text → no suggestion
+
+            users.forEach(u => {
+                if (u.name.toLowerCase().startsWith(text)) {
+                    let p = document.createElement("p");
+                    p.innerText = u.name;
+
+                    p.onclick = () => {
+                        document.getElementById("search").value = u.name;
+                        box.innerHTML = "";
+                    };
+
+                    box.appendChild(p);
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>

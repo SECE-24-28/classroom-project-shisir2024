@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Clock</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 100px;
+        background: #f2f2f2;
+    }
+
+    #bigClock {
+        font-size: 80px;
+        font-weight: bold;
+        letter-spacing: 5px;
+    }
+
+    #smallClock {
+        font-size: 30px;
+        margin-top: 20px;
+        color: #333;
+    }
+    h1{
+        
+    }
+</style>
+
+</head>
+<body>
+ <h1>digital lock</h1>
+    <div id="bigClock">00:00:00</div>
+    <div id="smallClock">Loading...</div>
+
+
+<script>
+    function updateClock() {
+        let now = new Date();
+
+        let h = String(now.getHours()).padStart(2, '0');
+        let m = String(now.getMinutes()).padStart(2, '0');
+        let s = String(now.getSeconds()).padStart(2, '0');
+
+        document.getElementById("bigClock").textContent = `${h}:${m}:${s}`;
+        document.getElementById("smallClock").textContent = now.toLocaleTimeString();
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); 
+</script>
+
+</body>
+</html>

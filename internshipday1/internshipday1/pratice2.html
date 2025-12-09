@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            text-decoration: none;
+            color: black;
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: sticky;
+            font-size: 20px;
+            padding: 10px;
+            background-color: yellow;
+        }
+
+        nav a {
+            margin-right: 10px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Different background colors for each section */
+        #hm {
+            background-color: aqua;
+        }
+
+        #ab {
+            background-color: lightgreen;
+        }
+
+        #gal {
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#hm">Home</a>|
+    <a href="#ab">About</a>|
+    <a href="#gal">Gallery</a>
+</nav>
+
+<!-- Home Section -->
+<div id="hm" class="section">
+    <h2>Home Section</h2>
+    <p>
+        Coffee is a popular beverage made from roasted seeds of the Coffea plant...
+    </p>
+</div>
+
+
+<div id="ab" class="section">
+    <h1>About Section</h1>
+    <p>
+        Coffee is a popular beverage made from roasted seeds of the Coffea plant...
+    </p>
+</div>
+
+<!-- Gallery Section -->
+<div id="gal" class="section">
+    <h2>Gallery Section</h2>
+    <p>
+        Coffee is a popular beverage made from roasted seeds of the Coffea plant...
+    </p>
+
+    <img src="pngtree-flying-cup-of-coffee-with-splash-and-png-image_15739217.png" 
+         alt="coffee cup" height="300" width="400">
+</div>
+
+</body>
+</html>
