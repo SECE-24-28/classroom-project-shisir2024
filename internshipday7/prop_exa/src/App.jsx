@@ -2,8 +2,12 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './Header';
+import { Body } from './Body';
+import { Footer } from './Footer';
 
-function App() {
+function App() 
+{
       const [list,setList] =useState([
         {id:1,sname:"Vinoth",fee:true},
         {id:2,sname:"Shiva",fee:false},
@@ -22,24 +26,12 @@ function App() {
       }
   return (
     <>
-         <h1>Students List</h1>
-         <hr />
-        <ul>
-        {
-           list.map((ls)=>
-            <li key={ls.id}>
-                  <input type="checkbox" checked={ls.fee} 
-                                         onChange={()=>handleCheck(ls.id)} />
-                  <label>{ls.sname}</label>
-                  <button onClick={()=>handleDelete(ls.id)}>Delete</button>
-            </li>
-          )
-        }
-        </ul>
-           
-           <br /><br />
-
-           <p>Student count : {list.length}</p>
+        <Header title={"Student List"}/>
+        <Body list={list}
+              handleCheck={handleCheck}
+              handleDelete={handleDelete}
+        />
+           <Footer len={list.length} />
     </>
   )
 }

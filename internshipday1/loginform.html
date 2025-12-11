@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .login-box {
+      width: 250px;
+      margin: 100px auto;
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
+    input {
+      width: 100%;
+      margin: 8px 0;
+      padding: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 6px;
+    }
+    .error {
+      color: red;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h3>Login</h3>
+    <form onsubmit="return validateLogin()">
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <div id="error" class="error"></div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function validateLogin() {
+      var user = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+      var error = document.getElementById("error");
+
+      if (user === "" || pass === "") {
+        error.textContent = "Please fill in all fields";
+        return false;
+      }
+
+      alert("Login successful!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
