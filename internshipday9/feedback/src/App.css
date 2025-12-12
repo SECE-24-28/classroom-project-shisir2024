@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+
+ol {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+ol li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+ol li a:hover {
+  text-decoration: underline;
+}
+

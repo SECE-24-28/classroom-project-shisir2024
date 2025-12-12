@@ -1,27 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import DataContext from './context/DataContext'
 
-const AddPost = ({ title, setTitle, body, setBody, handleSubmit }) => {
+const AddPost = () => 
+    {
+        const {title,setTitle,body,setBody,handleSubmit}=useContext(DataContext)
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text" 
-          placeholder="Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <br />
-
-        <textarea 
-          placeholder="Body"
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
-        />
-        <br />
-
-        <button type="submit">Save</button>
-      </form>
-      <hr />
+        <form action="" onSubmit={handleSubmit}>
+            <input type="text" name="" id="" placeholder='Title'
+                   value={title}
+                   onChange={(e)=>setTitle(e.target.value)}
+            /> <br />
+            <textarea name="" id="" placeholder='Body' 
+                   value={body}
+                   onChange={(e)=>setBody(e.target.value)}
+            />     <br />
+            <button type='submit'>Save</button>
+        </form>
     </div>
   )
 }

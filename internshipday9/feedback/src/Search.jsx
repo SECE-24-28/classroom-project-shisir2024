@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import DataContext from './context/DataContext'
-const Search = ({search,setSearch}) => {
-  const{num}=useContext(DataContext)
+
+const Search = () =>
+     {
+        const{search,setSearch}=useContext(DataContext)
   return (
     <div>
-        <h1>{num}</h1>
-        <input type="text" value={search} onChange={(e)=>setSearch(e.target.value)} />
-    </div>
+                <input type="text" value={search}  placeholder='Search Here'
+                           onChange={(e)=>setSearch(e.target.value)}
+               />
+        </div>
   )
 }
+
 export default Search
